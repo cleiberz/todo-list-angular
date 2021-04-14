@@ -1,6 +1,7 @@
 describe
 ('Form input', () => {
-  it('Visits the app', () => {
+  it('Focus the input on load', () => {
     cy.visit('/');
+    cy.focused().should('have.id', 'busca')
   });
 });
